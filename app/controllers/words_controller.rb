@@ -17,5 +17,6 @@ class WordsController < ApplicationController
         response = RestClient.get(url)       
         #render json: response
         @result = JSON.parse(response)
+        render json: @result
     end
 end
